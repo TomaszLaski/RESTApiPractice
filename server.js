@@ -44,7 +44,7 @@ app.use((req, res) => {
     res.status(404).send({ message: 'not found...'});
 });
 
-mongoose.connect('mongodb://localhost:27017/NewWaveDB', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://TomaszLaski:wtU31AnVZa40hL2P@cluster0-1mcfe.azure.mongodb.net/NewWaveDB?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 
 db.once('open', () => {
